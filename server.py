@@ -14,7 +14,7 @@ async def handle_connection(websocket, path):
         print(f"Sent message: {response}")
 
 # Menjalankan WebSocket server
-start_server = websockets.serve(handle_connection, 'localhost', 12345)
+start_server = websockets.serve(handle_connection, '0.0.0.0', 12345)
 
 async def main():
     async with start_server:
